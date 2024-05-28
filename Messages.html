@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="Css/style.css ">
+    <style>
+        .message-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .message-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .message-item:last-child {
+            border-bottom: none;
+        }
+        .message-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        .message-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .message-content {
+            flex: 1;
+        }
+        .message-sender {
+            font-weight: bold;
+        }
+        .message-text {
+            margin: 5px 0;
+        }
+        .message-time {
+            font-size: 0.8em;
+            color: #888;
+        }
+      
+    </style>
+</head>
+<header>
+    <H1>Welcome to Facebook</H1>
+    <div class="login-form">
+    <input type = 'text' placeholder="Username"/>
+    <input type = 'password' placeholder="Password"/>
+    <!-- <input type="date" id="monthAndDateInput" name="monthAndDate"> -->
+
+
+    <button>Login</button>
+</div>
+</header>
+<nav>
+    <ul>
+        <li> <a href="index.html">Home</a></li>
+        <li><a href="Friends.html">Friends</a></li> 
+        <li><a href="Messages.html">Messages</a></li> 
+    </ul>
+</nav>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Messages</h2>
+        </div>
+        <ul class="message-list">
+            <li class="message-item">
+                <div class="message-avatar">
+                    <img src="images/download-removebg-preview.png"  alt="Friend1">
+
+                </div>
+                <div class="message-content">
+                    <div class="message-sender">Jane Smith</div>
+                    <div class="message-text">Hello! How are you?</div>
+                    <div class="message-time">10:30 AM</div>
+                </div>
+            </li>
+            <li class="message-item">
+                <div class="message-avatar">
+                    <img src="images/image-removebg-preview (1).png" alt="Friend1"></div>
+                <div class="message-content">
+                    <div class="message-sender">John Doe</div>
+                    <div class="message-text">Don't forget our meeting tomorrow.</div>
+                    <div class="message-time">09:15 AM</div>
+                </div>
+            </li>
+            <li class="message-item">
+                <div class="message-avatar">
+                    <img src="images/image-removebg-preview.png" alt="Friend1">
+                </div>
+                <div class="message-content">
+                    <div class="message-sender">Shel Wish</div>
+                    <div class="message-text">Can you send me the report?</div>
+                    <div class="message-time">Yesterday</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

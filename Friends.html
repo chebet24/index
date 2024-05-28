@@ -4,40 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends</title>
-    <link rel="stylesheet" href="Css/style.css ">
+    <link rel="stylesheet" href="Css/style.css">
+    <style>
+
+ 
+      .friends-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .friend {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        }
+        .friend img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            margin-bottom: 10px;
+        }
+     
+    </style>
 </head>
 <body>
     <header>
-    <H1>Welcome to Facebook</H1>
-    <input type = 'text' placeholder="Username"/>
-    <input type = 'password' placeholder="Password"/>
-    <input type="date" id="monthAndDateInput" name="monthAndDate">
-
-    <button>Login</button>
-</header>
+        <h1>Welcome to Facebook</h1>
+        <div class="login-form">
+            <input type='text' placeholder="Username" />
+            <input type='password' placeholder="Password" />
+            <button>Login</button>
+        </div>
+    </header>
     <nav>
-    <ul>
-        <li> <a href="index.html">Home</a></li>
-        <li><a href="Friends.html">Friends</a></li> 
-        <li><a href="#">Messages</a></li> 
-    </ul>
-</nav>
-
-<main style="display: flex;flex-wrap: wrap;">
-    <h2>Your Friends on Facebook</h2>
-    <img src ="images/download-removebg-preview.png" style="width: 64px; height: 64px; border-radius: 50%;background-color: aliceblue;" alt ="Friend1">
-    <p>Jane Smith</p>
-    <img src ="images/image-removebg-preview (1).png"style="width: 64px; height: 64px;" alt ="Friend1">
-    <p>John Smith</p>
-    <img src ="images/image-removebg-preview (2).png" style="width: 64px; height: 64px; " alt ="Friend1">
-    <p>Feli  May</p>
-    <img src ="images/image-removebg-preview.png" style="width: 64px; height: 64px; " alt ="Friend1">
-    <p>Shel Wish</p>
-</main>
-<footer>
-    <p>
-        &copy;2024 Facebook
-    </p>
-</footer>  
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Friends.html">Friends</a></li>
+            <li><a href="Messages.html">Messages</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Your Friends on Facebook</h2>
+        <div class="friends-container">
+        <div class="friend">
+            <img src="images/download-removebg-preview.png" alt="Friend1">
+            <p>Jane Smith</p>
+        </div>
+        <div class="friend">
+            <img src="images/image-removebg-preview (1).png" alt="Friend2">
+            <p>John Smith</p>
+        </div>
+        <div class="friend">
+            <img src="images/image-removebg-preview (2).png" alt="Friend3">
+            <p>Feli May</p>
+        </div>
+        <div class="friend">
+            <img src="images/image-removebg-preview.png" alt="Friend4">
+            <p>Shel Wish</p>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy;2024 Facebook</p>
+    </footer>
 </body>
 </html>
