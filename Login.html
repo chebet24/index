@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/Login.css ">
+  <title>Login Form</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-info">
+          <h1>Welcome Back!</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus eget laoreet ultricies.</p>
+          </div>
+        <div class="login-form">
+          <h3>Login</h3>
+          <form id="loginForm">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+            <p id="errorMsg"></p>
+          </form>
+        </div>
+  <script>
+    function Login() {
+        // Get username and Login values
+      var username = document.getElementById('name').value;
+      var password = document.getElementById('password').value;
+
+    //   Simple username and password  check
+      if (username === 'mercy' && password === '123') { 
+        // Redirect to marks.html if credentials are correct 
+        window.location.href = "marks.html";
+      } else {
+        // Alert user if credentials are incorrect 
+        document.getElementById("errorMsg").innerHTML = "Invalid username or password";
+      }
+      return false
+    }
+  </script>
+</body>
+</html>
