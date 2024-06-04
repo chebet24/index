@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter marks for each subject</title>
+</head>
+<body>
+  <h1>Enter Marks for Each Subject</h1>
+  <form id="marksForm">
+    <h2>Math</h2>
+    <label for="math">Mark:</label>
+    <input type="number" id="math" name="math"><br>
+
+    <h2>English</h2>
+
+    <label for="english">Mark:</label>
+    <input type="number" id="english" name="english"><br>
+    <h2>kiswahili</h2>
+    <label for="kiswahili">Mark:</label>
+    <input type="number" id="kiswahili" name="kiswahili"><br>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <h2 >Total Marks <br><br></h2>
+    <p id="totalMarks">0</p>
+  </form>
+  <script>
+    function calculateTotal() {
+      // Get marks
+      var math = parseInt(document.getElementById('math').value);
+      var english = parseInt(document.getElementById('english').value);
+      var kiswahili = parseInt(document.getElementById('kiswahili').value);
+      // calculate total marks
+      var total = math + english + kiswahili;
+      // Display total marks
+      document.getElementById('totalMarks').innerHTML = "Total Marks: " + total;
+    }
+  </script>
+</body>
+</html>
